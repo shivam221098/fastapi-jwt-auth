@@ -144,7 +144,6 @@ class AuthJWT(AuthConfig):
 
         :return: Encoded token
         """
-        print(headers, "*" * 10)
         # Validation type data
         if not isinstance(subject, (str, int)):
             raise TypeError("subject must be a string or integer")
