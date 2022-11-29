@@ -22,7 +22,7 @@ def test_create_access_token(Authorize):
     with pytest.raises(TypeError,match=r"fresh"):
         Authorize.create_access_token(subject="test",fresh="lol")
 
-        with pytest.raises(AttributeError,match=r"'str' object has no attribute 'get'"):
+    with pytest.raises(AttributeError,match=r"'str' object has no attribute 'get'"):
         Authorize.create_access_token(subject=1,headers="test")
 
 def test_create_refresh_token(Authorize):
