@@ -401,3 +401,4 @@ def test_load_env_from_outside():
         @AuthJWT.load_config
         def get_invalid_csrf_methods_value():
             return [("authjwt_csrf_methods",['posts'])]
+
