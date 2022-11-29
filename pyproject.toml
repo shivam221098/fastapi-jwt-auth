@@ -49,7 +49,7 @@ doc = [
 
 dev = [
   "cryptography>=2.6,<4.0.0",
-  "uvicorn>=0.11.5,<0.12.0"
+  "uvicorn>=0.11.5,<0.21.0"
 ]
 
 asymmetric = ["cryptography>=2.6,<4.0.0"]
