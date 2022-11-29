@@ -154,8 +154,6 @@ class AuthJWT(AuthConfig):
             raise TypeError("algorithm must be a string")
         if user_claims and not isinstance(user_claims, dict):
             raise TypeError("user_claims must be a dictionary")
-        if not isinstance(headers, dict):
-            raise ValueError("dictionary update sequence element")
 
         # Data section
         reserved_claims = {
