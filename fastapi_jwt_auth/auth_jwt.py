@@ -144,6 +144,7 @@ class AuthJWT(AuthConfig):
 
         :return: Encoded token
         """
+        print(headers, "*" * 10)
         # Validation type data
         if not isinstance(subject, (str, int)):
             raise TypeError("subject must be a string or integer")
@@ -155,6 +156,8 @@ class AuthJWT(AuthConfig):
             raise TypeError("algorithm must be a string")
         if user_claims and not isinstance(user_claims, dict):
             raise TypeError("user_claims must be a dictionary")
+        if not isinstance(headers, dict):
+            raise ValueError("headers must be dictionary update sequence element")
 
         # Data section
         reserved_claims = {
